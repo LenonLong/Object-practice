@@ -13,8 +13,31 @@ keysInObject(foods); // => ["apple", "lemon", "mango"]
 ***********************************************************************/
 
 function keysInObject(obj) {
-  // Your code here
+  let keyArr = []
+  for (let key in obj) {
+    keyArr.push(key)
+
+  }
+  return keyArr
 }
+
+
+let animals = {
+  dog: 'Wolfie',
+  cat: 'Jet',
+  bison: 'Bilbo'
+}
+
+let food = {
+  apple: 'tart',
+  lemon: 'sour',
+  mango: 'sweet'
+}
+console.log(keysInObject(animals))
+console.log(keysInObject(food))
+
+console.log(Object.keys(animals))
+console.log(Object.keys(food))
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = keysInObject;

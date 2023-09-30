@@ -7,17 +7,28 @@ function will be in charge of returning the number of keys that contain the word
 **Hint**: you may want to take all the keys and lower case them for easier
 searching.
 
+***********************************************************************/
 
-Example:
+function appleCounter(appleObj) {
+  let word = 'apple'
+  let count = 0;
+
+  for (let key in appleObj) {
+    if (key.toLowerCase().includes(word)) {
+      count++;
+    }
+  }
+  return count;
+}
+
 let obj = { banana: "yay!" };
-appleCounter(obj); // => 0
+console.log(appleCounter(obj)); // => 0
 
 let obj1 = { crabapple: "yum!" };
-appleCounter(obj1); // => 1
+console.log(appleCounter(obj1)); // => 1
 
 let obj2 = { crabapple: "yum!", honeyapple: "super yum", banana: "yay" };
-appleCounter(obj2); // => 2
-
+console.log(appleCounter(obj2)); // => 2
 
 let obj3 = {
   crabApple: "yum!",
@@ -25,12 +36,7 @@ let obj3 = {
   banana: "yay",
   bigapple: "NYC"
 };
-appleCounter(obj3); // => 3
-***********************************************************************/
-
-function appleCounter(appleObj) {
-  // Your code here
-}
+console.log(appleCounter(obj3)); // => 3
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = appleCounter;
